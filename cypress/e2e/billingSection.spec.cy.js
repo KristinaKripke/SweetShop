@@ -12,7 +12,7 @@ describe('Billing section', () => {
         cy.get(billingSectionSelectors.firstName).should('be.visible');
     });
     it('Should have Last name input field', () => {
-        cy.get(billingSectionSelectors.lasName).should('be.visible');
+        cy.get(billingSectionSelectors.lastName).should('be.visible');
     });
     it('Should have Email input field', () => {
         cy.get(billingSectionSelectors.email).should('be.visible');

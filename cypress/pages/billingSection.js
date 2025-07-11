@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { BillingSectionSelectors } from "../components/BillingSectionComponents";
+import { billingSectionSelectors } from "../components/billingSectionComponents";
 
 class BillingPage {
     visit() {
