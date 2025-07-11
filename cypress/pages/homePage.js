@@ -8,10 +8,6 @@ class HomePage {
     clickButton() {
         cy.get(HomePageSelectors.button).click();
     };
-    
-
 };
-
-
 
 export default HomePage;

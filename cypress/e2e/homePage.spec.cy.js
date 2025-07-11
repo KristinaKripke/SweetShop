@@ -26,5 +26,4 @@ describe('Home page', () => {
     it('Should have Sale banner', () => {
         cy.get(HomePageSelectors.saleBanner).should('be.visible');
     });
-
 });

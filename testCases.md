@@ -8,7 +8,7 @@ Website: https://sweetshop.netlify.app/
 
 ### Sweets page:
 2.1. Page load   
-    2.1.1 Check the page has title 'Browse sweets' and text.  
+    2.1.1 Check the page has title 'Browse sweets'.  
     2.1.2 Check the products are displayed // galima cikla yra paveiksliukas, pavadinimas, aprasymas, kaina, mygtukas (galbut tikrinti ar yra vidiniai elementai korteles) 
 
 2.2. Add to basket.   
