@@ -27,4 +27,12 @@ describe('Total section', () => {
         cy.get(totalSelectors.radioStandard).click({force: true});
         cy.get(totalSelectors.radioStandard).should('be.checked');
     });
+    it('Should select Collect', () => {
+        cy.get(totalSelectors.radioCollect).click({force: true});
+        cy.get(totalSelectors.radioCollect).should('be.checked');
+    });
+    it('Should not accept the promo code', () => {
+        totalPage.promoCode();
+        cy.get(totalSelectors.totalPrice).should('contain.text', '£3.70');
+    });
 });

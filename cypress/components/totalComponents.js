@@ -6,5 +6,6 @@ export const totalSelectors = {
     radioStandard: "input[id='exampleRadios2']",
     radioCollect: "input[id='exampleRadios1']",
     deleteItem: "a.small",
-    promoCode: "input[placehokder='Promo code']"
+    promoCode: "input[placeholder='Promo code']",
+    promoBtn: "button.btn-secondary"
 }

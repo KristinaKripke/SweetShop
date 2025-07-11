@@ -31,6 +31,16 @@ class TotalPage {
         cy.get('a[href="/basket"]').click({multiple: true});
         cy.get(totalSelectors.deleteItem).first().click({multiple: true});
     };
+    promoCode() {
+        cy.get('.navbar-brand').click({multiple: true});
+        cy.get('.addItem').eq(0).click({multiple: true});
+        cy.get('.addItem').eq(1).click({multiple: true});
+        cy.get('.addItem').eq(2).click({multiple: true});
+        cy.get('.addItem').eq(3).click({multiple: true});
+        cy.get('a[href="/basket"]').click({multiple: true});
+        cy.get(totalSelectors.promoCode).type('testPromoCode');
+        cy.get(totalSelectors.promoBtn).click({multiple: true});
+    };
 };
 
 export default TotalPage;
