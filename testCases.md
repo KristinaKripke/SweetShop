@@ -29,10 +29,8 @@ Website: https://sweetshop.netlify.app/
     4.2.1 Login with valid details  
     4.2.2 Login with invalid details  
         4.2.2.1 Login without email  
-        4.2.2.2 Login without password  
-        4.2.2.3 Login with email that already exists    
-        4.2.2.4 Login with invalid email format  
-        4.2.2.5 Login with invalid password
+        4.2.2.2 Login without password    
+        4.2.2.3 Login with invalid email format  
 
 ### Basket page:
 5.1. Page load:   

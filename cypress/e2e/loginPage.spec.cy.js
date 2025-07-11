@@ -21,6 +21,18 @@ describe('Login page', () => {
     });
     it('Should login user with valid details', () => {
         loginPage.validLogin();
-        cy.get(LoginPageSelectors.loginInSuccess).should('be.visible');
+        cy.get(LoginPageSelectors.loginSuccess).should('be.visible');
+    });
+    it('Should display error message when email field is left empty', () => {
+        loginPage.loginWithoutEmail();
+        cy.get(LoginPageSelectors.enterEmailMsg).should('be.visible');
+    });
+    it('Should display error message when password field is left empty', () => {
+        loginPage.loginWithoutPassword();
+        cy.get(LoginPageSelectors.enterPassMsg).should('be.visible');
+    });
+    it('Should display error message when email is invalid', () => {
+        loginPage.loginInvalidEmailFormat();
+        cy.get(LoginPageSelectors.enterEmailMsg).should('be.visible');
     });
 });

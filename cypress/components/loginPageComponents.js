@@ -6,6 +6,8 @@ export const LoginPageSelectors = {
     emailInput: 'input[type="email"]',
     passwordInput: 'input[type="password"]',
     socials: '.social',
-    loginInSuccess: 'span.text-muted',
-    submit: 'button'
+    loginSuccess: 'h1.display-3',
+    submit: '.btn.btn-primary',
+    enterEmailMsg: '.invalid-email',
+    enterPassMsg: '.invalid-password'
 }
