@@ -7,5 +7,6 @@ export const totalSelectors = {
     radioCollect: "input[id='exampleRadios1']",
     deleteItem: "a.small",
     promoCode: "input[placeholder='Promo code']",
-    promoBtn: "button.btn-secondary"
+    promoBtn: "button.btn-secondary",
+    emptyBasket: "a:contains('Empty Basket')"
 }

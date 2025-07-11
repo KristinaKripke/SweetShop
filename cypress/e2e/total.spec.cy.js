@@ -35,4 +35,13 @@ describe('Total section', () => {
         totalPage.promoCode();
         cy.get(totalSelectors.totalPrice).should('contain.text', '£3.70');
     });
+    it('Should empty basket', () => {
+        totalPage.addItems();
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Are you sure you want to empty your basket?');
+            return true;
+        });
+        cy.get(totalSelectors.emptyBasket).click();
+        cy.get(totalSelectors.numberOfItems).should('contain.text', '0');
+    });
 });
