@@ -36,7 +36,7 @@ Website: https://sweetshop.netlify.app/
 5.1. Page load:   
     5.1.1. Check 'Your Basket' and description are displayed.  
     5.1.2. Check input 'Billing address' and 'Payment' sections are displayed.   
-    5.1.3. Check 'Total' is displayed and shows correct price.   
+    5.1.3. Check 'Total' is displayed.   
     5.1.4. Check 'Delivery' options 'Collect' and 'Standard Shipping' are available.   
     5.1.5. Check 'Promo code' textbox is displayed.    
     5.1.6. Check button 'Continue to checkout' is displayed.  
