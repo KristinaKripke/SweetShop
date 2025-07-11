@@ -79,23 +79,8 @@ Website: https://sweetshop.netlify.app/
     6.2.4 Checkout without 'Address'.     
     6.2.5 Checkout without 'Country'.   
     6.2.6 Checkout without 'City'.   
-    6.2.7 Checkout without 'Zip'.     
-    6.2.8 Checkout with very short 'First name'.  
-    6.2.9 Checkout with very long 'First name'.   
-    6.2.10 Checkout with numbers as 'First name'.   
-    6.2.11 Checkout with space before 'First name'.   
-    6.2.12 Checkout with special characters in 'First name'.   
-    6.2.13 Checkout with very short 'Last name'.   
-    6.2.14 Checkout with very long 'Last name'.   
-    6.2.15 Checkout with numbers as 'Last name'.    
-    6.2.16 Checkout with space before 'Last name'.   
-    6.2.17 Checkout with special characters in 'Last name'.    
-    6.2.18 Checkout with invalid email.    
-    6.2.19 Checkout with invalid address.    
-    6.2.20 Checkout with letters as zip.        
-    6.2.21 Checkout with very short zip.   
-    6.2.22 Checkout with very long zip.   
-
+    6.2.7 Checkout without 'Zip'.         
+    6.2.8 Checkout with invalid email.     
 
 6.3. Payment:   
     6.3.1 Checkout without 'Name on card'.       

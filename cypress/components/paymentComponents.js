@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-export const checkoutSelectors = {
+export const paymentSelectors = {
     firstName: "input#name",
     lastName: "input#name",
     email: "input#email",
