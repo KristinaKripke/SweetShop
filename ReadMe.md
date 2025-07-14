@@ -16,12 +16,12 @@ There is a total of 76 tests. If everything is set up correctly 3 tests should b
 You can find all test cases here: [Test cases](/testCases.md)
 
 ### 🎯 Project features/goals:  
-Cypress
+Cypress      
 GitHub actions  
 
 ### 💻 Prerequisites:  
 Node.js  
-newman 
+Cypress 
 
 ### 🏃 Installation:  
 Would like to run this project locally? Open terminal and follow these steps:
