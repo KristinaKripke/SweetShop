@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-import { AboutPageSelectors } from "../components/aboutPageComponents";
-
 
 class AboutPage {
     selector = {

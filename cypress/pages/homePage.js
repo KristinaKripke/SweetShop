@@ -1,12 +1,19 @@
 /// <reference types="cypress" />
-import { HomePageSelectors } from "../components/homePageComponents";
 
 class HomePage {
+    selector = {
+        title: 'h1.display-3',
+        button: 'a.btn.sweets',
+        retroSection: 'span.lead',
+        sweetsCard: 'div.card',
+        saleBanner: 'div.advertising'
+    }
+
     visit() {
         cy.visit('/');
     };
     clickButton() {
-        cy.get(HomePageSelectors.button).click();
+        cy.get(this.selector.button).click();
     };
 };
 

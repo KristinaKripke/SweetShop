@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import HomePage from '../pages/homePage';
-import { HomePageSelectors } from '../components/homePageComponents';
 
 describe('Home page', () => {
     const homePage = new HomePage();
@@ -9,10 +8,10 @@ describe('Home page', () => {
     });
 
     it('Should display expected title', () => {
-        cy.get(HomePageSelectors.title).should('contain.text', 'Welcome to the sweet shop!');
+        cy.get(homePage.selector.title).should('contain.text', 'Welcome to the sweet shop!');
     });
     it('Should have Browse sweets button', () => {
-        cy.get(HomePageSelectors.button).should('be.visible');
+        cy.get(homePage.selector.button).should('be.visible');
     });
     it('Button navigates to Sweets page', () => {
         homePage.clickButton();
@@ -20,10 +19,10 @@ describe('Home page', () => {
         cy.get('h1').should('contain.text', 'Browse sweets');
     });
     it('Should have Our most popular choice of retro sweets section', () => {
-        cy.get(HomePageSelectors.retroSection).should('contain.text', 'Our most popular choice of retro sweets.');
-        cy.get(HomePageSelectors.sweetsCard).should('be.visible');
+        cy.get(homePage.selector.retroSection).should('contain.text', 'Our most popular choice of retro sweets.');
+        cy.get(homePage.selector.sweetsCard).should('be.visible');
     });
     it('Should have Sale banner', () => {
-        cy.get(HomePageSelectors.saleBanner).should('be.visible');
+        cy.get(homePage.selector.saleBanner).should('be.visible');
     });
 });

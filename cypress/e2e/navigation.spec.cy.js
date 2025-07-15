@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import {NavigationHome, NavigationSweets, NavigationAbout, NavigationLogin, NavigationBasket} from '../pages/navigation';
-import { navSelectors } from '../components/navigationComponents';
 
 describe('Navigation from home page', () => {
     const navigationHome = new NavigationHome();
@@ -9,22 +8,22 @@ describe('Navigation from home page', () => {
     });
 
     it('Should navigate from home page to Sweets page', () => {
-        cy.get(navSelectors.sweets).eq(0).click();
+        cy.get(navigationHome.selector.sweets).eq(0).click();
         cy.url().should('include', '/sweets');
         cy.get('h1').should('be.visible').and('contain.text', 'Browse sweets');
     });
     it('Should navigate from home page to About page', () => {
-        cy.get(navSelectors.about).eq(1).click();
+        cy.get(navigationHome.selector.about).eq(1).click();
         cy.url().should('include', '/about');
         cy.get('h1').should('be.visible').and('contain.text', 'Sweet Shop Project');
     });
     it('Should navigate from home page to Login page', () => {
-        cy.get(navSelectors.login).eq(2).click();
+        cy.get(navigationHome.selector.login).eq(2).click();
         cy.url().should('include', '/login');
         cy.get('h1').should('be.visible').and('contain.text', 'Login');
     });
     it('Should navigate from home page to Basket page', () => {
-        cy.get(navSelectors.basket).eq(3).click();
+        cy.get(navigationHome.selector.basket).eq(3).click();
         cy.url().should('include', '/basket');
         cy.get('h1').should('be.visible').and('contain.text', 'Your Basket');
     });
@@ -37,21 +36,21 @@ describe('Navigation from sweets page', () => {
     });
 
     it('Should navigate from sweets page to home page', () => {
-        cy.get(navSelectors.home).click();
+        cy.get(navigationSweets.selector.home).click();
         cy.get('h1').should('be.visible').and('contain.text', 'Welcome to the sweet shop!');
     });
     it('Should navigate from sweets to about page', () => {
-        cy.get(navSelectors.about).eq(1).click();
+        cy.get(navigationSweets.selector.about).eq(1).click();
         cy.url().should('include', '/about');
         cy.get('h1').should('be.visible').and('contain.text', 'Sweet Shop Project');
     });
     it('Should navigate from sweets to Login page', () => {
-        cy.get(navSelectors.login).eq(2).click();
+        cy.get(navigationSweets.selector.login).eq(2).click();
         cy.url().should('include', '/login');
         cy.get('h1').should('be.visible').and('contain.text', 'Login');
     });
         it('Should navigate from sweets to Basket page', () => {
-        cy.get(navSelectors.basket).eq(3).click();
+        cy.get(navigationSweets.selector.basket).eq(3).click();
         cy.url().should('include', '/basket');
         cy.get('h1').should('be.visible').and('contain.text', 'Basket');
     });
@@ -64,21 +63,21 @@ describe('Navigation from about page', () => {
     });
 
     it('Should navigate from about page to home page', () => {
-        cy.get(navSelectors.home).click();
+        cy.get(navigationAbout.selector.home).click();
         cy.get('h1').should('be.visible').and('contain.text', 'Welcome to the sweet shop!');
     });
     it('Should navigate from about to sweets page', () => {
-        cy.get(navSelectors.sweets).eq(0).click();
+        cy.get(navigationAbout.selector.sweets).eq(0).click();
         cy.url().should('include', '/sweets');
         cy.get('h1').should('be.visible').and('contain.text', 'Browse sweets');
     });
     it('Should navigate from about to login page', () => {
-        cy.get(navSelectors.login).eq(2).click();
+        cy.get(navigationAbout.selector.login).eq(2).click();
         cy.url().should('include', '/login');
         cy.get('h1').should('be.visible').and('contain.text', 'Login');
     });
         it('Should navigate from about to Basket page', () => {
-        cy.get(navSelectors.basket).eq(3).click();
+        cy.get(navigationAbout.selector.basket).eq(3).click();
         cy.url().should('include', '/basket');
         cy.get('h1').should('be.visible').and('contain.text', 'Basket');
     });
@@ -91,21 +90,21 @@ describe('Navigation from login page', () => {
     });
 
     it('Should navigate from login page to home page', () => {
-        cy.get(navSelectors.home).click();
+        cy.get(navigationLogin.selector.home).click();
         cy.get('h1').should('be.visible').and('contain.text', 'Welcome to the sweet shop!');
     });
     it('Should navigate from login to sweets page', () => {
-        cy.get(navSelectors.sweets).eq(0).click();
+        cy.get(navigationLogin.selector.sweets).eq(0).click();
         cy.url().should('include', '/sweets');
         cy.get('h1').should('be.visible').and('contain.text', 'Browse sweets');
     });
     it('Should navigate from login to about page', () => {
-        cy.get(navSelectors.about).eq(1).click();
+        cy.get(navigationLogin.selector.about).eq(1).click();
         cy.url().should('include', '/about');
         cy.get('h1').should('be.visible').and('contain.text', 'Sweet Shop Project');
     });
         it('Should navigate from login to Basket page', () => {
-        cy.get(navSelectors.basket).eq(3).click();
+        cy.get(navigationLogin.selector.basket).eq(3).click();
         cy.url().should('include', '/basket');
         cy.get('h1').should('be.visible').and('contain.text', 'Basket');
     });
@@ -118,21 +117,21 @@ describe('Navigation from basket page', () => {
     });
 
     it('Should navigate from basket page to home page', () => {
-        cy.get(navSelectors.home).click();
+        cy.get(navigationBasket.selector.home).click();
         cy.get('h1').should('be.visible').and('contain.text', 'Welcome to the sweet shop!');
     });
     it('Should navigate from basket to sweets page', () => {
-        cy.get(navSelectors.sweets).eq(0).click();
+        cy.get(navigationBasket.selector.sweets).eq(0).click();
         cy.url().should('include', '/sweets');
         cy.get('h1').should('be.visible').and('contain.text', 'Browse sweets');
     });
     it('Should navigate from basket to about page', () => {
-        cy.get(navSelectors.about).eq(1).click();
+        cy.get(navigationBasket.selector.about).eq(1).click();
         cy.url().should('include', '/about');
         cy.get('h1').should('be.visible').and('contain.text', 'Sweet Shop Project');
     });
         it('Should navigate from basket to login page', () => {
-        cy.get(navSelectors.login).eq(2).click();
+        cy.get(navigationBasket.selector.login).eq(2).click();
         cy.url().should('include', '/login');
         cy.get('h1').should('be.visible').and('contain.text', 'Login');
     });

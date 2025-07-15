@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import AboutPage from '../pages/aboutPage';
-import { AboutPageSelectors } from '../components/aboutPageComponents';
 
 describe('Home page', () => {
     const aboutPage = new AboutPage();

@@ -1,122 +1,138 @@
 /// <reference types="cypress" />
-import { checkoutSelectors } from "../components/checkoutComponents";
 
 class CheckoutForm {
+    selector = {
+        firstName: "input#name",
+        lastName: "input#name",
+        email: "input#email",
+        address: "input#address",
+        address2: "input#address2",
+        country: "select#country",
+        city: "select#city",
+        zip: "input#zip",
+        cardName: "input#cc-name",
+        cardNumber: "input#cc-number",
+        expiration: "input#cc-expiration",
+        cvv: "input#cc-cvv",
+        submit: "button.btn-primary",
+        invalid: ".invalid-feedback",
+    }
+
     visit() {
         cy.visit('/basket');
     };
 
     fillFormWithoutFirstName() {
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasa');
-        cy.get(checkoutSelectors.email).type('test@email.com');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.lastName).eq(1).type('Rasa');
+        cy.get(this.selector.email).type('test@email.com');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithoutLastName() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.email).type('test@email.com');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.email).type('test@email.com');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithoutEmail() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasyte');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.lastName).eq(1).type('Rasyte');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithoutAddress() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasyte');
-        cy.get(checkoutSelectors.email).type('test@email.com');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.lastName).eq(1).type('Rasyte');
+        cy.get(this.selector.email).type('test@email.com');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithoutCountry() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasyte');
-        cy.get(checkoutSelectors.email).type('test@email.com');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.lastName).eq(1).type('Rasyte');
+        cy.get(this.selector.email).type('test@email.com');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithoutCity() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasyte');
-        cy.get(checkoutSelectors.email).type('test@email.com');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.lastName).eq(1).type('Rasyte');
+        cy.get(this.selector.email).type('test@email.com');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithoutZip() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasyte');
-        cy.get(checkoutSelectors.email).type('test@email.com');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.lastName).eq(1).type('Rasyte');
+        cy.get(this.selector.email).type('test@email.com');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 
     fillFormWithInvalidEmail() {
-        cy.get(checkoutSelectors.firstName).eq(0).type('Rasa');
-        cy.get(checkoutSelectors.lastName).eq(1).type('Rasyte');
-        cy.get(checkoutSelectors.email).type('testemail.com');
-        cy.get(checkoutSelectors.address).type('Rasytes 11');
-        cy.get(checkoutSelectors.country).select('United Kingdom');
-        cy.get(checkoutSelectors.city).select('Bristol');
-        cy.get(checkoutSelectors.zip).type('1234');
-        cy.get(checkoutSelectors.cardName).type('Rasa Rasyte');
-        cy.get(checkoutSelectors.cardNumber).type('645362749763');
-        cy.get(checkoutSelectors.expiration).type('22/04/25');
-        cy.get(checkoutSelectors.cvv).type('234');
-        cy.get(checkoutSelectors.submit).click();
+        cy.get(this.selector.firstName).eq(0).type('Rasa');
+        cy.get(this.selector.lastName).eq(1).type('Rasyte');
+        cy.get(this.selector.email).type('testemail.com');
+        cy.get(this.selector.address).type('Rasytes 11');
+        cy.get(this.selector.country).select('United Kingdom');
+        cy.get(this.selector.city).select('Bristol');
+        cy.get(this.selector.zip).type('1234');
+        cy.get(this.selector.cardName).type('Rasa Rasyte');
+        cy.get(this.selector.cardNumber).type('645362749763');
+        cy.get(this.selector.expiration).type('22/04/25');
+        cy.get(this.selector.cvv).type('234');
+        cy.get(this.selector.submit).click();
     };
 };
 

@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import SweetsPage from '../pages/sweetsPage';
-import { SweetsPageSelectors } from '../components/sweetsPageComponents';
 
 describe('Sweets page', () => {
     const sweetsPage = new SweetsPage();
@@ -9,20 +8,20 @@ describe('Sweets page', () => {
     });
 
     it('Should have Browse sweets title', () => {
-        cy.get(SweetsPageSelectors.title).should('be.visible');
+        cy.get(sweetsPage.selector.title).should('be.visible');
     });
     it('Should have cards with picture, title, description, price and add to basket button', () => {
-        cy.get(SweetsPageSelectors.card).each(($card) => {
-            cy.wrap($card).find(SweetsPageSelectors.cardImg).should('be.visible');
-            cy.wrap($card).find(SweetsPageSelectors.cardTitle).should('be.visible');
-            cy.wrap($card).find(SweetsPageSelectors.cardText).should('be.visible');
-            cy.wrap($card).find(SweetsPageSelectors.cardPrice).should('be.visible');
-            cy.wrap($card).find(SweetsPageSelectors.cardFooter).should('be.visible');
+        cy.get(sweetsPage.selector.card).each(($card) => {
+            cy.wrap($card).find(sweetsPage.selector.cardImg).should('be.visible');
+            cy.wrap($card).find(sweetsPage.selector.cardTitle).should('be.visible');
+            cy.wrap($card).find(sweetsPage.selector.cardText).should('be.visible');
+            cy.wrap($card).find(sweetsPage.selector.cardPrice).should('be.visible');
+            cy.wrap($card).find(sweetsPage.selector.cardFooter).should('be.visible');
         });
     });
     it('Should add product to basket', () => {
         sweetsPage.addToBasket();
-        cy.get(SweetsPageSelectors.itemsInBasket).should('be.visible').and('contain.text', '1');
+        cy.get(sweetsPage.selector.itemsInBasket).should('be.visible').and('contain.text', '1');
     });
 
 });

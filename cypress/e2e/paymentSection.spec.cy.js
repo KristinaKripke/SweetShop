@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import PaymentPage from '../pages/paymentSection';
-import { paymentSectionSelectors } from '../components/paymentSectionComponents';
 
 describe('Payment section', () => {
     const paymentPage = new PaymentPage();
@@ -9,15 +8,15 @@ describe('Payment section', () => {
     });
 
     it('Should have Name on card input field', () => {
-        cy.get(paymentSectionSelectors.nameOnCard).should('be.visible');
+        cy.get(paymentPage.selector.nameOnCard).should('be.visible');
     });
     it('Should have Credit card number input field', () => {
-        cy.get(paymentSectionSelectors.cardNumber).should('be.visible');
+        cy.get(paymentPage.selector.cardNumber).should('be.visible');
     });
     it('Should have Expiration input field', () => {
-        cy.get(paymentSectionSelectors.expiration).should('be.visible');
+        cy.get(paymentPage.selector.expiration).should('be.visible');
     });
     it('Should have CVV input field', () => {
-        cy.get(paymentSectionSelectors.cvv).should('be.visible');
+        cy.get(paymentPage.selector.cvv).should('be.visible');
     });
 });

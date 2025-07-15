@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import BasketPage from '../pages/basketPage';
-import { BasketPageSelectors } from '../components/basketPageComponents';
 
 describe('Basket page', () => {
     const basketPage = new BasketPage();
@@ -9,24 +8,24 @@ describe('Basket page', () => {
     });
 
     it('Should have title and description', () => {
-        cy.get(basketPage.title).should('be.visible').and('contain.text', 'Your Basket');
-        cy.get(basketPage.description).should('be.visible');
+        cy.get(basketPage.selector.title).should('be.visible').and('contain.text', 'Your Basket');
+        cy.get(basketPage.selector.description).should('be.visible');
     });
     it('Should have Billing address and Payment sections', () => {
-        cy.get(BasketPageSelectors.billingSection).should('be.visible').and('contain.text', 'Billing address');
-        cy.get(BasketPageSelectors.paymentSection).should('be.visible').and('contain.text', 'Payment');
+        cy.get(basketPage.selector.billingSection).should('be.visible').and('contain.text', 'Billing address');
+        cy.get(basketPage.selector.paymentSection).should('be.visible').and('contain.text', 'Payment');
     });
     it('Should display total price', () => {
-        cy.get(BasketPageSelectors.total).should('be.visible');
+        cy.get(basketPage.selector.total).should('be.visible');
     });
     it('Delivery options radio buttons should be displayed', () => {
-        cy.get(BasketPageSelectors.radioCollect).should('be.visible');
-        cy.get(BasketPageSelectors.radioStandard).should('be.visible');
+        cy.get(basketPage.selector.radioCollect).should('be.visible');
+        cy.get(basketPage.selector.radioStandard).should('be.visible');
     });
     it('Promo code input field should be displayed', () => {
-        cy.get(BasketPageSelectors.promoCode).should('be.visible');
+        cy.get(basketPage.selector.promoCode).should('be.visible');
     });
     it('Should have Continue to checkout button', () => {
-        cy.get(BasketPageSelectors.checkoutButton).should('be.visible');
-    });
+        cy.get(basketPage.selector.checkoutButton).should('be.visible');
+    }); 
 });
