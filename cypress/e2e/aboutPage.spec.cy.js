@@ -9,12 +9,12 @@ describe('Home page', () => {
     });
 
     it('Should have title', () => {
-        cy.get(AboutPageSelectors.title).should('be.visible').and('contain.text', 'Sweet Shop Project');
+        cy.get(aboutPage.selector.title).should('be.visible').and('contain.text', 'Sweet Shop Project');
     });
     it('Should have description text', () => {
-        cy.get(AboutPageSelectors.description).should('be.visible');
+        cy.get(aboutPage.selector.description).should('be.visible');
     });
     it('Should have a banner that matches 2018', () => {
-        cy.get(AboutPageSelectors.bannerText).should('be.visible').and('contain.text', 'Sweet Shop Project 2018');
+        cy.get(aboutPage.selector.bannerText).should('be.visible').and('contain.text', 'Sweet Shop Project 2018');
     });
 });

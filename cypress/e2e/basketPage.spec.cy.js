@@ -9,8 +9,8 @@ describe('Basket page', () => {
     });
 
     it('Should have title and description', () => {
-        cy.get(BasketPageSelectors.title).should('be.visible').and('contain.text', 'Your Basket');
-        cy.get(BasketPageSelectors.description).should('be.visible');
+        cy.get(basketPage.title).should('be.visible').and('contain.text', 'Your Basket');
+        cy.get(basketPage.description).should('be.visible');
     });
     it('Should have Billing address and Payment sections', () => {
         cy.get(BasketPageSelectors.billingSection).should('be.visible').and('contain.text', 'Billing address');

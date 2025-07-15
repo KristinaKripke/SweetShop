@@ -3,7 +3,7 @@
 ### Cypress testing project [Sweet Shop](https://sweetshop.netlify.app/)
 
 ### 🌟 About
-This project serves as an educational resource for test automation with cypress and Node.js. It provides practical, hands-on experience with automating tests and integrating tests into CI/CD workflows, running tests automatically with GitHub Actions. Test scenarios for this projects:   
+This project serves as an educational resource for test automation with cypress and Node.js. It provides practical, hands-on experience with automating tests and integrating tests into CI/CD workflows, GitHub actions activating tests with push and pull request to the main branch. Test scenarios for this projects:   
 1. Home page.     
 2. Sweets page.      
 3. About page.     
