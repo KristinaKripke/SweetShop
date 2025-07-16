@@ -1,52 +1,36 @@
 /// <reference types="cypress" />
 import { navSelectors } from "../components/navigationComponents";
 
-class NavigationHome {
+class Navigation {
     constructor () {
         this.selector = navSelectors;
     }
 
-    visit() {
-        cy.visit('/');
-    }
-};
-class NavigationSweets {
-    constructor () {
-        this.selector = navSelectors;
+    visit(navigationItem = '') {
+        cy.visit(`/${navigationItem}`);
     }
 
-    visit() {
-        cy.visit('/sweets');
-    }
-};
-class NavigationAbout {
-    constructor () {
-        this.selector = navSelectors;
+    navigateToHome() {
+        cy.get(this.selector.home).click();
     }
 
-    visit() {
-        cy.visit('/about');
-    }
-};
-class NavigationLogin {
-    constructor () {
-        this.selector = navSelectors;
+    navigateToSweets() {
+        cy.get(this.selector.sweets).click();
     }
 
-    visit() {
-        cy.visit('/login');
+    navigateToBasket() {
+        cy.get(this.selector.basket).click();
     }
-};
-class NavigationBasket {
-    constructor () {
-        this.selector = navSelectors;
+
+    navigateToLogin() {
+        cy.get(this.selector.login).click();
     }
-    
-    visit() {
-        cy.visit('/basket');
+
+    navigateToAbout() {
+        cy.get(this.selector.about).click();
     }
 };
 
-export default {NavigationHome, NavigationSweets, NavigationAbout, NavigationLogin, NavigationBasket};
+export default {Navigation};
 
 

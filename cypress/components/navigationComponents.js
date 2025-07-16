@@ -2,8 +2,8 @@
 
 export const navSelectors = {
     home: ".navbar-brand",
-    sweets: "a.nav-link",
-    about: "a.nav-link",
-    login: "a.nav-link",
-    basket: "a.nav-link",
+    sweets: "#navbarColor01 a[href='/sweets']",
+    about: "#navbarColor01 a[href='/about']",
+    login: "#navbarColor01 a[href='/login']",
+    basket: "#navbarColor01 a[href='/basket']"
 }
