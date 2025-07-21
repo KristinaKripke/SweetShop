@@ -11,7 +11,7 @@ describe('Login page', () => {
         cy.get(loginPage.selector.title).should('be.visible').and('contain.text', 'Login');
         cy.get(loginPage.selector.description).should('be.visible');
     });
-    it('Should have email input field', () => {
+    it('Should have email and password input fields', () => {
         cy.get(loginPage.selector.emailInput).should('be.visible');
         cy.get(loginPage.selector.passwordInput).should('be.visible');
     });
